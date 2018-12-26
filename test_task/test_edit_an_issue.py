@@ -30,7 +30,7 @@ class My_test(unittest.TestCase):
         self.repos_owner = "den"
         self.login_collaborator = "RussianTestUser"
         self.tokens = {
-            "owner": "token c7e824c5b8f4efe8bef514c1d6f1d7a2bf53703c",  # владелец fox122018
+            "owner": "token 8d0eb644e408b14612a7e2553024aa8a7410a9a3" ,  # владелец fox122018
             "guest": "token 01c070c430ad42b6c0267c810daa7464fde7e0ee"   # гость ProkofevaAlina
         }
         self.head = {
