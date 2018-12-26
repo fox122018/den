@@ -1,0 +1,67 @@
+C:\Anaconda3\python.exe C:/Users/Андрей/PycharmProjects/test_task/test_edit_an_issue.py
+Создана issue с номером 38
+https://api.github.com/repos/fox122018/den/issues/38
+Номера milestones: [1]
+Тестирование параметра assignees от имени guest
+Тестирование параметра assignees от имени owner
+..Тестирование параметра body
+.Закрытие issue от имени guest, который не является ее автором
+.Редактированиие issue от имени  ее автора, который является guest
+.Тестирование при некорректном url
+.Тестирование параметра labels от имени guest
+.Тестирование параметра labels от имени owner
+Тестирование параметра milestone от имени guest
+.Тестирование параметра milestone от имени owner
+.Переоткрытие issue от имени guest, который не является ее автором
+.Тестирование параметра state от имени owner
+Тестирование параметра title
+
+======================================================================
+FAIL: test_labels_by_owner (__main__.My_test) (i={'labels': ['баг', 'QUESTion']})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/Андрей/PycharmProjects/test_task/test_edit_an_issue.py", line 94, in check
+    self.assertEqual(d[name_param][j]["name"], p[name_param][j])
+AssertionError: 'question' != 'баг'
+- question
++ баг
+
+
+======================================================================
+FAIL: test_state_by_owner (__main__.My_test) (i={'state': 'cLOsEd'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/Андрей/PycharmProjects/test_task/test_edit_an_issue.py", line 102, in check
+    self.assertGreaterEqual(response.status_code, 400)  # Ошибка клиента
+AssertionError: 200 not greater than or equal to 400
+
+======================================================================
+FAIL: test_state_by_owner (__main__.My_test) (i={'state': 'OPEN'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/Андрей/PycharmProjects/test_task/test_edit_an_issue.py", line 102, in check
+    self.assertGreaterEqual(response.status_code, 400)  # Ошибка клиента
+AssertionError: 200 not greater than or equal to 400
+
+======================================================================
+FAIL: test_state_by_owner (__main__.My_test) (i={'state': 'new state, oops'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/Андрей/PycharmProjects/test_task/test_edit_an_issue.py", line 102, in check
+    self.assertGreaterEqual(response.status_code, 400)  # Ошибка клиента
+AssertionError: 200 not greater than or equal to 400
+
+======================================================================
+FAIL: test_title (__main__.My_test) (i={'title': 13})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/Андрей/PycharmProjects/test_task/test_edit_an_issue.py", line 102, in check
+    self.assertGreaterEqual(response.status_code, 400)  # Ошибка клиента
+AssertionError: 200 not greater than or equal to 400
+
+----------------------------------------------------------------------
+Ran 13 tests in 69.040s
+
+FAILED (failures=5)
+
+Process finished with exit code 1
